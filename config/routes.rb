@@ -1,4 +1,6 @@
 Qlevar::Application.routes.draw do
+  get "home/index"
+
   get "welcome/index"
 
   match "/auth/:provider/callback" => "sessions#create", as: :auth_callback

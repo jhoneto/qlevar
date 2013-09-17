@@ -207,3 +207,553 @@ NameError (undefined local variable or method `secret_page_path' for #<SessionsC
   Rendered /Users/hamilton/.rvm/gems/ruby-1.9.3-p448@qlevar/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
   Rendered /Users/hamilton/.rvm/gems/ruby-1.9.3-p448@qlevar/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
   Rendered /Users/hamilton/.rvm/gems/ruby-1.9.3-p448@qlevar/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.3ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-16 21:14:54 -0300
+Connecting to database specified by database.yml
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (19.4ms)
+Compiled home.css  (6ms)  (pid 13545)
+Compiled application.css  (14ms)  (pid 13545)
+Compiled home.js  (519ms)  (pid 13545)
+Compiled application.js  (533ms)  (pid 13545)
+Completed 200 OK in 632ms (Views: 631.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-16 21:14:55 -0300
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-09-16 21:14:55 -0300
+Served asset /home.css - 200 OK (1ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-09-16 21:14:55 -0300
+Served asset /welcome.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-09-16 21:14:55 -0300
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-09-16 21:14:55 -0300
+Served asset /home.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-16 21:14:55 -0300
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-16 21:14:55 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-09-16 21:14:55 -0300
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-09-16 21:14:55 -0300
+Served asset /welcome.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-16 21:14:55 -0300
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2013-09-16 21:14:57 -0300
+
+
+Started GET "/auth/facebook/callback?code=AQA5fh61UIDpqXCqM6_ujE-ga0Zn-BKID6qlDodzeK709xWGU3F-YmNWWENwbL7hJNkuLgj-IC3joZYpryFfykolKqfYHtuENy4iwhgrUantpl1Koe7-W87QYKg4zIkZhTUUK_mZaMXb6CjrlPSei7w592u1HWXJC3hX6_1mbqiNfqLCBJaMFACAZkdyNNlge6M4Ok-TmomRRFU3K1yAUBASXJrDZq7JVerRPwjdmp0iQVsnKpti3fSwB_6hMyIkR8KLr18MySjaCtQTw9I9uAeNvYg-d5ku4ytOQN_HfendTMW54PfyeA8tu5qVcVfK6FI&state=bf7fac499f4bd78f595b8a3f25329c31831e025e73a5dc40" for 127.0.0.1 at 2013-09-16 21:14:58 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQA5fh61UIDpqXCqM6_ujE-ga0Zn-BKID6qlDodzeK709xWGU3F-YmNWWENwbL7hJNkuLgj-IC3joZYpryFfykolKqfYHtuENy4iwhgrUantpl1Koe7-W87QYKg4zIkZhTUUK_mZaMXb6CjrlPSei7w592u1HWXJC3hX6_1mbqiNfqLCBJaMFACAZkdyNNlge6M4Ok-TmomRRFU3K1yAUBASXJrDZq7JVerRPwjdmp0iQVsnKpti3fSwB_6hMyIkR8KLr18MySjaCtQTw9I9uAeNvYg-d5ku4ytOQN_HfendTMW54PfyeA8tu5qVcVfK6FI", "state"=>"bf7fac499f4bd78f595b8a3f25329c31831e025e73a5dc40", "provider"=>"facebook"}
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '100006758612014' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.8ms)[0m  [1mUPDATE "users" SET "access_token" = 'CAACTNhzMcd0BAB6ZCYju0XHWNojQwsJ6wPjTVp27ZAdc5prlbHWx4u6AoJCdOyZBzB8iMRHbofnCt7W6TslVtbyqyKWRgFm0m86fXzaPJaQ8rCZAZBZAeyoLqZBz614ZBPJhObm3avGhyh3ALPLSTA8ZC5sl24lq9XK1DIVSx0G2jvoy96DE5v2di', "updated_at" = '2013-09-17 00:14:59.598548' WHERE "users"."id" = 1[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 96ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-09-16 21:14:59 -0300
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `authenticate!' for #<HomeController:0x007fa57f18ad40>):
+  activesupport (3.2.14) lib/active_support/callbacks.rb:418:in `_run__3727795322140256297__process_action__1885201714779660893__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.14) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  omniauth (1.1.4) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.1.4) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.1.4) lib/omniauth/builder.rb:49:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `_run__3257287027406316209__call__3529608682692484325__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/hamilton/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/hamilton/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/hamilton/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/hamilton/.rvm/gems/ruby-1.9.3-p448@qlevar/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/hamilton/.rvm/gems/ruby-1.9.3-p448@qlevar/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/hamilton/.rvm/gems/ruby-1.9.3-p448@qlevar/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-09-16 21:29:43 -0300
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `authenticate!' for #<HomeController:0x007fb7cac51d48>):
+  activesupport (3.2.14) lib/active_support/callbacks.rb:418:in `_run__2704385166521496027__process_action__2464326714104784261__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.14) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  omniauth (1.1.4) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.1.4) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.1.4) lib/omniauth/builder.rb:49:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `_run__3277002665673320760__call__4218714079894741747__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/hamilton/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/hamilton/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/hamilton/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/hamilton/.rvm/gems/ruby-1.9.3-p448@qlevar/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/hamilton/.rvm/gems/ruby-1.9.3-p448@qlevar/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/hamilton/.rvm/gems/ruby-1.9.3-p448@qlevar/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-16 21:29:49 -0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-09-16 21:29:49 -0300
+Served asset /home.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-16 21:29:49 -0300
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-09-16 21:29:49 -0300
+Served asset /welcome.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-16 21:29:49 -0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-09-16 21:29:49 -0300
+Served asset /sessions.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-16 21:29:49 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-09-16 21:29:49 -0300
+Served asset /home.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-09-16 21:29:49 -0300
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-09-16 21:29:49 -0300
+Served asset /welcome.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-16 21:29:49 -0300
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2013-09-16 21:29:51 -0300
+
+
+Started GET "/auth/facebook/callback?code=AQDbLdKbFLe6Ze6qUTInCjnkJNUC2tAx47h6U2wU53MaP7nrW4I5NcZcafwt63KQpFzkK8lqNuLdLMaQw9BBdTb3WnPIf-ksR2veMWrWrk34dNAHkaCBj5Yp1abX65x1S_FRKJicHnGv7U0mUNd9f9KBtLzn8BhXd1uYQNuRSst1AS9p_DuWjasNdvxUUQSyqz56jDkcwAk2JwgHA9HQi7bpX51gsdE3PC_PhT0RdgEPlPCDcAZe0Li5m7OLETpF9Z58ln2MGhROO_LTdMVj98Q9ofbjriolk7jG_rrHVtQTh-KxwMtasKh1APyGArEZXZY&state=9dd572b03c8eeb35b44e8b4843eb550fd3de05c49156be72" for 127.0.0.1 at 2013-09-16 21:29:51 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDbLdKbFLe6Ze6qUTInCjnkJNUC2tAx47h6U2wU53MaP7nrW4I5NcZcafwt63KQpFzkK8lqNuLdLMaQw9BBdTb3WnPIf-ksR2veMWrWrk34dNAHkaCBj5Yp1abX65x1S_FRKJicHnGv7U0mUNd9f9KBtLzn8BhXd1uYQNuRSst1AS9p_DuWjasNdvxUUQSyqz56jDkcwAk2JwgHA9HQi7bpX51gsdE3PC_PhT0RdgEPlPCDcAZe0Li5m7OLETpF9Z58ln2MGhROO_LTdMVj98Q9ofbjriolk7jG_rrHVtQTh-KxwMtasKh1APyGArEZXZY", "state"=>"9dd572b03c8eeb35b44e8b4843eb550fd3de05c49156be72", "provider"=>"facebook"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '100006758612014' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mUPDATE "users" SET "access_token" = 'CAACTNhzMcd0BAOg1eREXwZACPObaQnbMk3nDBQQSyPly4pMmTkeeQaXGoK9l0WC9XkxuZCMdCM1GL55YPd9OtfQoZCGcrNPxTDa8Au45vPqnXyMWGRJx52lZB4nUzEthYAdLZAdSYdTFB8duG13QCfQJ6Gu7CHEkXyMthe5hQZCZCAwQsqCIfZB1', "updated_at" = '2013-09-17 00:29:53.370242' WHERE "users"."id" = 1[0m
+  [1m[35m (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 77ms (ActiveRecord: 10.2ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-09-16 21:29:53 -0300
+Processing by HomeController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `authenticate!' for #<HomeController:0x007fb7cd0af320>):
+  activesupport (3.2.14) lib/active_support/callbacks.rb:418:in `_run__2704385166521496027__process_action__2464326714104784261__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.14) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.14) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.14) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.14) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.14) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.14) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.14) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.14) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.14) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.14) lib/action_dispatch/routing/route_set.rb:608:in `call'
+  omniauth (1.1.4) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.1.4) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.1.4) lib/omniauth/builder.rb:49:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.14) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.14) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `_run__3277002665673320760__call__4218714079894741747__callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.14) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.14) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.14) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.14) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.14) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.14) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.14) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.14) lib/rails/engine.rb:484:in `call'
+  railties (3.2.14) lib/rails/application.rb:231:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.14) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/hamilton/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/hamilton/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/hamilton/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/hamilton/.rvm/gems/ruby-1.9.3-p448@qlevar/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_trace.erb (21.9ms)
+  Rendered /Users/hamilton/.rvm/gems/ruby-1.9.3-p448@qlevar/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/hamilton/.rvm/gems/ruby-1.9.3-p448@qlevar/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.4ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-09-16 21:30:00 -0300
+
+SyntaxError (/Users/hamilton/itium/ruby/workspace/qlevar/app/controllers/application_controller.rb:20: invalid multibyte char (US-ASCII)
+/Users/hamilton/itium/ruby/workspace/qlevar/app/controllers/application_controller.rb:20: invalid multibyte char (US-ASCII)
+/Users/hamilton/itium/ruby/workspace/qlevar/app/controllers/application_controller.rb:20: syntax error, unexpected $end, expecting ')'
+...ect_to(root_url, notice: "Você precisa estar autenticado......
+...                               ^):
+  app/controllers/home_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/hamilton/.rvm/gems/ruby-1.9.3-p448@qlevar/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-16 21:30:32 -0300
+
+SyntaxError (/Users/hamilton/itium/ruby/workspace/qlevar/app/controllers/application_controller.rb:20: invalid multibyte char (US-ASCII)
+/Users/hamilton/itium/ruby/workspace/qlevar/app/controllers/application_controller.rb:20: invalid multibyte char (US-ASCII)
+/Users/hamilton/itium/ruby/workspace/qlevar/app/controllers/application_controller.rb:20: syntax error, unexpected $end, expecting ')'
+...ect_to(root_url, notice: "Você precisa estar autenticado......
+...                               ^):
+  app/controllers/welcome_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/hamilton/.rvm/gems/ruby-1.9.3-p448@qlevar/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-16 21:30:35 -0300
+
+SyntaxError (/Users/hamilton/itium/ruby/workspace/qlevar/app/controllers/application_controller.rb:20: invalid multibyte char (US-ASCII)
+/Users/hamilton/itium/ruby/workspace/qlevar/app/controllers/application_controller.rb:20: invalid multibyte char (US-ASCII)
+/Users/hamilton/itium/ruby/workspace/qlevar/app/controllers/application_controller.rb:20: syntax error, unexpected $end, expecting ')'
+...ect_to(root_url, notice: "Você precisa estar autenticado......
+...                               ^):
+  app/controllers/welcome_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/hamilton/.rvm/gems/ruby-1.9.3-p448@qlevar/gems/actionpack-3.2.14/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-16 21:31:29 -0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-16 21:31:29 -0300
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-09-16 21:31:29 -0300
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-09-16 21:31:29 -0300
+Served asset /sessions.css - 200 OK (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-09-16 21:31:29 -0300
+Served asset /welcome.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-16 21:31:29 -0300
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-16 21:31:29 -0300
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-09-16 21:31:29 -0300
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-09-16 21:31:29 -0300
+Served asset /sessions.js - 200 OK (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-09-16 21:31:29 -0300
+Served asset /welcome.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-16 21:31:29 -0300
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2013-09-16 21:31:31 -0300
+
+
+Started GET "/auth/facebook/callback?code=AQDMAsy5TiJ0qpsWjcqvP15c-KMQpWxZ9sCk3juLV9_NsKNhpmpFDDkqQKtMl2ru0cda2RGdPtbq7XQjexj-vOCQVrLnCZpwAVEwH8QsDKQDZRrQm8yJVStFbR81Rs53EvQ_ypkPcWjA7RAcAjDAlHfkQOpSNXkXD_mGpBQa21iCwncLaOUzhRykA2ZpKS9NKkR3HAVcsmElTX9vspZuzbWytD-RcFfMxpYpo-7-xsINJa5jDtclVHhCj-5BYR9HPmdmt_dxNUGbsPaLvjUe8Cl-gPg9udSurrfvE8CSH-6VKocy27uldDs1rjphuOjGV34&state=e0f03b6a69385c4e74e33d80802d068b5011e8e0890dc958" for 127.0.0.1 at 2013-09-16 21:31:32 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDMAsy5TiJ0qpsWjcqvP15c-KMQpWxZ9sCk3juLV9_NsKNhpmpFDDkqQKtMl2ru0cda2RGdPtbq7XQjexj-vOCQVrLnCZpwAVEwH8QsDKQDZRrQm8yJVStFbR81Rs53EvQ_ypkPcWjA7RAcAjDAlHfkQOpSNXkXD_mGpBQa21iCwncLaOUzhRykA2ZpKS9NKkR3HAVcsmElTX9vspZuzbWytD-RcFfMxpYpo-7-xsINJa5jDtclVHhCj-5BYR9HPmdmt_dxNUGbsPaLvjUe8Cl-gPg9udSurrfvE8CSH-6VKocy27uldDs1rjphuOjGV34", "state"=>"e0f03b6a69385c4e74e33d80802d068b5011e8e0890dc958", "provider"=>"facebook"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '100006758612014' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mUPDATE "users" SET "access_token" = 'CAACTNhzMcd0BAMUMVY19y0OxCQVZAXUZAsAE2VZArBiZCgUmaodqqTB2evZCJU2y2j6PA9sB13BUeEmrAGE3tU6YACCmnKQB07fQRYzMZCvl4AUXqh5tteGYp5CkbDw20ZB6sMl44QksLvZCZBuG0y4NXhK5c9ZC4KtZBY5ZC5zb1ZB3R1urTWqOnorB2', "updated_at" = '2013-09-17 00:31:33.266911' WHERE "users"."id" = 1[0m
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 19ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-09-16 21:31:33 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2013-09-16 21:31:37 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RX9HozLzlatouXhb5D460x5h8B5LiWj+NyaCNAg4bmI="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-16 21:31:37 -0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-16 21:32:16 -0300
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-16 21:32:16 -0300
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-09-16 21:32:16 -0300
+Served asset /sessions.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-09-16 21:32:16 -0300
+Served asset /home.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-16 21:32:16 -0300
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-16 21:32:16 -0300
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-09-16 21:32:16 -0300
+Served asset /welcome.css - 200 OK (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-09-16 21:32:16 -0300
+Served asset /home.js - 200 OK (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-09-16 21:32:16 -0300
+Served asset /sessions.js - 200 OK (0ms)
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-09-16 21:32:16 -0300
+Served asset /welcome.js - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-16 21:32:16 -0300
+Served asset /application.js - 200 OK (0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2013-09-16 21:32:17 -0300
+
+
+Started GET "/auth/facebook/callback?code=AQA68SvN6EIN4djWXpm7-AeWBdxk0YrvXyXw3GxxNF1RCcp4YfSoK7PyT2LCBJBbGosfl4mJCjp_klec4RmKX6ua3pOuJWVGhfUHG0nYsERLYCVXWK5ILU5uTpPgbQjQuYZLzvDUgkpJLD1PqbEFtMuN34RdOzqK39_tDNKEsyKyWmasLIujECbZAYBNO1_HKgn7jFJDAfqF3kzBCDUrhBmwye5Gs5tCCWQ2B0gBmxdaNHGr5Fm412vm3hdtm-4mjPZR-xqzSvhdhsyWlOkXftHkDTJs6VMCk2tP8qNOg3P7njpMQOeia2Sz3Fub7uha_JE&state=aa3e01a89a478a0d5abe9187901b675aac09bcd9f541d783" for 127.0.0.1 at 2013-09-16 21:32:18 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQA68SvN6EIN4djWXpm7-AeWBdxk0YrvXyXw3GxxNF1RCcp4YfSoK7PyT2LCBJBbGosfl4mJCjp_klec4RmKX6ua3pOuJWVGhfUHG0nYsERLYCVXWK5ILU5uTpPgbQjQuYZLzvDUgkpJLD1PqbEFtMuN34RdOzqK39_tDNKEsyKyWmasLIujECbZAYBNO1_HKgn7jFJDAfqF3kzBCDUrhBmwye5Gs5tCCWQ2B0gBmxdaNHGr5Fm412vm3hdtm-4mjPZR-xqzSvhdhsyWlOkXftHkDTJs6VMCk2tP8qNOg3P7njpMQOeia2Sz3Fub7uha_JE", "state"=>"aa3e01a89a478a0d5abe9187901b675aac09bcd9f541d783", "provider"=>"facebook"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."provider" = 'facebook' AND "users"."uid" = '100006758612014' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  UPDATE "users" SET "access_token" = 'CAACTNhzMcd0BAEDVM7elMjHp55XZAthlhUdxMN1qXeSocmHEc3kppec5LfRI6cuBDIPALcZA9FrOu37DsK1wfZA8ZCSOhoirPPt2GPecLeG4oyUQnI6jQp54OyoHgD4JivesntANBtbkCe0eqDXJJTV8DGIs23YRHs1DgYxHE3QoWTZCWmzlZA', "updated_at" = '2013-09-17 00:32:19.918178' WHERE "users"."id" = 1
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/home/index
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/home/index" for 127.0.0.1 at 2013-09-16 21:32:19 -0300
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 41ms (Views: 5.8ms | ActiveRecord: 0.4ms)
